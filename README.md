@@ -17,7 +17,8 @@ A consumer-grade router ideal for experimenting with common security vulnerabili
 ## Use Case
 
 This setup will be used to:
-	•	**Learn Networking: By configuring VLANs, experimenting with routing and switching, and setting up network services.
+
+	•	Learn Networking: By configuring VLANs, experimenting with routing and switching, and setting up network services.
 	•	Study Servers: Using the Lenovo ThinkCentre as a server for experimenting with Linux and gaining familiarity with the terminal and server management.
 	•	Security Testing: Focus on studying vulnerabilities, especially in IoT devices, by setting up a dedicated VLAN for such devices and investigating their security weaknesses.
 	•	Safe Experimentation: The isolated environment allows for risk-free experimentation without affecting production systems.
