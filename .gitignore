@@ -1,0 +1,7 @@
+
+debian-network-server/config_files/config/passwd
+debian-network-server/config_files/config/installed-packages.txt
+debian-network-server/config_files/config/sysctl.conf
+
+debian-network-server/network_config/hostname
+debian-network-server/network_config/hosts
