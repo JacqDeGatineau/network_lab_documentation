@@ -1,0 +1,82 @@
+config-file-header
+ManekiNekoNet
+v2.5.9.54 / RCBS3.1_930_871_120
+CLI v1.0
+file SSD indicator encrypted
+@
+ssd-control-start
+ssd config
+ssd file passphrase control unrestricted
+no ssd file integrity control
+ssd-control-end cb0a3fdb1f3a1af4e4430033719968c0
+!
+!
+unit-type-control-start
+unit-type unit 1 network gi uplink none
+unit-type-control-end
+!
+bridge multicast filtering
+vlan database
+vlan 10,100
+exit
+voice vlan oui-table add 0001e3 Siemens_AG_phone
+voice vlan oui-table add 00036b Cisco_phone           
+voice vlan oui-table add 00096e Avaya
+voice vlan oui-table add 000fe2 H3C_Aolynk
+voice vlan oui-table add 0060b9 Philips_and_NEC_AG_phone
+voice vlan oui-table add 00d01e Pingtel_phone
+voice vlan oui-table add 00e075 Polycom/Veritel_phone
+voice vlan oui-table add 00e0bb 3Com_phone
+no eee enable
+no boot host auto-config
+no boot host auto-update
+bonjour interface range vlan 1,10
+hostname ManekiNekoNet
+username [REDACTED FOR SECURITY] password encrypted $15$[REDACTED FOR SECURITY]== privilege 15
+clock timezone EET +2
+!
+interface vlan 10
+ name DHCP
+ ip address 192.168.0.1 255.255.255.0
+!
+interface vlan 100
+ name IoT
+ ip address 192.168.1.1 255.255.255.0
+!                                                     
+interface GigabitEthernet1
+ description DHCP
+ switchport access vlan 10
+!
+interface GigabitEthernet2
+ description DHCP
+ switchport access vlan 10
+!
+interface GigabitEthernet3
+ description DHCP
+ switchport access vlan 10
+!
+interface GigabitEthernet4
+ description DHCP
+ switchport access vlan 10
+!
+interface GigabitEthernet5
+ description IoT
+ bridge multicast unregistered filtering
+ switchport access vlan 100
+!
+interface GigabitEthernet6                            
+ description IoT
+ bridge multicast unregistered filtering
+ switchport access vlan 100
+!
+interface GigabitEthernet7
+ description IoT
+ bridge multicast unregistered filtering
+ switchport access vlan 100
+!
+interface GigabitEthernet8
+ description IoT
+ bridge multicast unregistered filtering
+ switchport access vlan 100
+!
+exit
