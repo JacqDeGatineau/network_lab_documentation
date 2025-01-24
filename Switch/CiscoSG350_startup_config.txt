@@ -36,7 +36,7 @@ username [REDACTED FOR SECURITY] password encrypted $15$[REDACTED FOR SECURITY]=
 clock timezone EET +2
 !
 interface vlan 10
- name DHCP
+ name local
  ip address 192.168.0.254 255.255.255.0
 !
 interface vlan 100
@@ -44,19 +44,19 @@ interface vlan 100
  ip address 192.168.1.254 255.255.255.0
 !                                                     
 interface GigabitEthernet1
- description DHCP
+ description local
  switchport access vlan 10
 !
 interface GigabitEthernet2
- description DHCP
+ description local
  switchport access vlan 10
 !
 interface GigabitEthernet3
- description DHCP
+ description local
  switchport access vlan 10
 !
 interface GigabitEthernet4
- description DHCP
+ description local
  switchport access vlan 10
 !
 interface GigabitEthernet5
