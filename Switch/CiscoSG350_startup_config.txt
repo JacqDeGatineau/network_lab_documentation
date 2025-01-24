@@ -37,11 +37,11 @@ clock timezone EET +2
 !
 interface vlan 10
  name DHCP
- ip address 192.168.0.1 255.255.255.0
+ ip address 192.168.0.254 255.255.255.0
 !
 interface vlan 100
  name IoT
- ip address 192.168.1.1 255.255.255.0
+ ip address 192.168.1.254 255.255.255.0
 !                                                     
 interface GigabitEthernet1
  description DHCP
